@@ -1,0 +1,89 @@
+<!DOCTYPE html>  <!-- 定義為 HTML5 文件 -->
+<html lang="zh-TW"> <!-- 根元素，lang 設定語言 -->
+<head>
+    <meta charset="UTF-8"> <!-- 設定編碼，防止亂碼 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 響應式佈局關鍵 -->
+    <title>師大附中美食地圖</title> <!-- 顯示在瀏覽器分頁上 -->
+    <!-- Leaflet 樣式 -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>師大附中美食地圖</h1>
+  </header>
+
+
+
+
+
+
+
+  <div id='sidebar'>
+      <div class="drop-container">
+    <div class="drop">
+      <div class="dropOption" id="dropButton">
+        <span>餐廳類別</span>
+      </div>
+
+
+      <ul class="dropdown" id="dropMenu">
+        <li onclick="filterByTag_sidebar('全部')">全部</li>
+        <li onclick="filterByTag_sidebar('Southeast Asian')">東南亞料理</li>
+        <li onclick="filterByTag_sidebar('fast food')">快餐</li>
+        <li onclick="filterByTag_sidebar('healthy')">健康餐盒</li>
+        <li onclick="filterByTag_sidebar('hot pot')">火鍋</li>
+        <li onclick="filterByTag_sidebar('Japanese')">日式料理</li>
+        <li onclick="filterByTag_sidebar('braekfast')">早餐店</li>
+        <li onclick="filterByTag_sidebar('noodle')">麵</li>
+        <li onclick="filterByTag_sidebar('coffee')">咖啡廳</li>
+        <li onclick="filterByTag_sidebar('steak')">牛排館</li>
+      </ul>
+    </div>
+
+
+    <div class="drop2">
+      <div class="dropOption2" id="dropButton2">
+        <span>餐廳位置</span>
+      </div>
+
+
+      <ul class="dropdown2" id="dropMenu2">
+        <li onclick="filterByTag_sidebar_loc('全部')">全部</li>
+        <li onclick="filterByTag_sidebar_loc('nearby')">附近</li>
+        <li onclick="filterByTag_sidebar_loc('TAIVS')">大安高工</li>
+      </ul>
+    </div>
+  </div>
+  <div id="restaurantList">
+
+  </div>
+  
+  
+  
+  
+  
+  </div> 
+
+   
+    <section><div id="map"></div></section>
+
+  <section class="button">
+  <div>
+  <button onclick="Lhsnu()" id = 'locate'>定位師大附中</button>
+  <button onclick="filterByTag('全部')" id="fl">全部</button>
+  <button onclick="filterByTag('OnePerson')"id="fl">適合單人</button>
+  <button onclick="filterByTag('Dating')"id="fl">適合約會</button>
+  <button onclick="filterByTag('Gathering')"id="fl">適合聚餐</button>
+  <button onclick="filterByTag('FastServe')"id="fl">快速服務</button>
+  <button onclick="filterByTag('SlowEat')"id="fl">慢慢享用</button>
+  <button onclick="filterByTag('eletronic payment')"id="fl">電子支付</button>
+</div>
+</section>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- 程式 -->
+  <script src="script.js"></script>
+</body>
+</html>
