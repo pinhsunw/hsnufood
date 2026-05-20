@@ -269,32 +269,33 @@ header {
   }
 
 
-  /* 按鈕區取消相對偏移動作，置中排列 */
   .button {
     position: relative;
     width: 100%;
     left: 0;
     top: 0;
-    margin-top: 20px;
+    margin-top: -400px;
     justify-content: center;
-    padding: 0 10px;
+    padding: 0 0;
     box-sizing: border-box;
   }
 
-
   #fl, #locate {
-    width: 40%; /* 按鈕各佔近一半寬度 */
+    width: 20%; /* 按鈕各佔近一半寬度 */
     max-width: 150px;
+    width: 20%; 
+    max-width: 150px;
+    height: 50px;       /* 您的按鈕高度 */
+    line-height: 50px;  /* 行高必須與高度相同，文字就會垂直置中 */
+    text-align: center; /* 確保文字水平置中 */
   }
-
 
   /* 地圖取消偏移動作，改為寬度 100% 滿版，排在按鈕與側邊欄下方 */
   #map {
     width: 92vw;
     height: 45vh; /* 手機版固定高度，方便單手操作 */
-    left: 4vw;
-    top: 15px;
+    left: 3vw;
+    top: 25vb;
     margin-bottom: 40px;
   }
 }
-
